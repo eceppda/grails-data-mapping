@@ -2,6 +2,7 @@
 include "grails-datastore-core",
         "grails-datastore-gemfire",
         "grails-datastore-mongo",
+        "grails-datastore-couchbase",
         "grails-datastore-jpa",
         "grails-datastore-redis",
 /*        "grails-datastore-riak",*/

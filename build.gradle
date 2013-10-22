@@ -36,6 +36,7 @@ allprojects {
         }
         mavenCentral()
         maven { url "http://repo.grails.org/grails/core" }
+        maven { url "http://files.couchbase.com/maven2/" }
     }
 
     configurations {
@@ -169,7 +170,7 @@ subprojects {
         }
         
         test {
-            maxHeapSize = '2048m'
+            maxHeapSize = '256m'
         }        
         test.doFirst {
             def tckClassesDir = project(":grails-datastore-gorm-tck").sourceSets.main.output.classesDir

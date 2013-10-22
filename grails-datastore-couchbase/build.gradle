@@ -1,0 +1,9 @@
+version = "1.0.0.BUILD-SNAPSHOT"
+dependencies {
+    compile project(":grails-datastore-core")
+    compile ('net.spy:spymemcached:2.10.0')
+    compile ('couchbase:couchbase-client:1.1.4')
+    compile ('org.springframework.data:spring-data-commons-core:1.4.1.RELEASE')
+    compile ('com.google.code.gson:gson:2.2.4')
+    compile ('org.springframework:spring-binding:1.0.6')
+}
