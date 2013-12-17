@@ -33,4 +33,8 @@ class DBObject {
         }
     }
 
+    boolean containsField(String name) {
+        return keyValue.containsKey(name)
+    }
+
 }

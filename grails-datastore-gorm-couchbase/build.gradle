@@ -1,0 +1,28 @@
+version = "0.0.1.BUILD-SNAPSHOT"
+configurations {
+    grails
+}
+
+dependencies {
+    compile ('net.spy:spymemcached:2.10.0')
+    compile ('couchbase:couchbase-client:1.1.4')
+    grails("org.grails:grails-core:$grailsVersion")
+    grails("org.grails:grails-bootstrap:$grailsVersion") {
+        transitive = false
+    }
+    compile project(":grails-datastore-gorm"),
+            project(":grails-datastore-gorm-plugin-support"),
+            project(":grails-datastore-couchbase"),
+            project(":grails-datastore-core")
+    testCompile project(":grails-datastore-gorm-test"),
+            project(":grails-datastore-gorm-tck")
+
+    testRuntime "javax.servlet:servlet-api:2.5"
+    testRuntime "org.grails:grails-web:$grailsVersion"
+}
+
+sourceSets {
+    main {
+        compileClasspath += configurations.grails
+    }
+}
